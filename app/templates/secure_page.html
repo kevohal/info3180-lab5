@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+  <h1>Secure Page</h1>
+  {% include 'flash_messages.html' %}
+  <div class="alert alert-info">Bonjour {{ current_user.username }}! We are pleased that you visited us today. 
+      You Have been redirected to this secure page because you have been successfully logged in. Enjoy your time wih us.
+      Thanks for joining. 
+  </div>
+
+{% endblock %}

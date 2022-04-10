@@ -60,9 +60,9 @@ def login():
             # passed to the login_user() method below.
 
             # get user id, load into session
-            login_user(user,  remember=remember_me)
+            login_user(user)
 
-            flash('{{ username }}, you\'ve successfully logged in.', 'success')
+            flash('You\'ve successfully logged in.', 'success')
 
             next_page = request.args.get('next')
             # remember to flash a message to the user
@@ -71,7 +71,7 @@ def login():
             flash('Incorrect credentials entered. Username or password is incorrect.', 'danger')
 
         flash_errors(form)            
-        return render_template("login.html", form=form)
+    return render_template("login.html", form=form)
 
 
 # user_loader callback. This callback is used to reload the user object from
